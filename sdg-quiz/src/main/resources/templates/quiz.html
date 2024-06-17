@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8">
+<title>SDGsクイズに挑戦！</title>
+</head>
+<body>
+    <h1>SDGsクイズ！</h1>
+    <form th:action="@{/quiz}" method="post">
+        <div th:each="quiz : ${quiz}">
+            <h2 th:text="${quiz.question}"></h2>
+            <input type="radio" name="selectedChoice" th:value="${quiz.option1}"/><span th:text="${quiz.option1}"></span><br/>
+            <input type="radio" name="selectedChoice" th:value="${quiz.option2}"/><span th:text="${quiz.option2}"></span><br/>
+            <input type="radio" name="selectedChoice" th:value="${quiz.option3}"/><span th:text="${quiz.option3}"></span><br/>
+            <input type="hidden" name="quizId" th:value="${quiz.id}"/>
+            <button type="submit">提出</button>    
+    </form>
+    <div th:if="${quiz == null}">
+		<p th:text="${message}"></p>
+	</div>
+</body>
+</html>

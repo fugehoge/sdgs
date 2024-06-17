@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8">
+<title>サインアップ</title>
+</head>
+<body>
+	
+	<h1>サインアップしよう！</h1>
+	<form th:action="@{/signup}" th:object="${user}" method="post">
+	   <div>
+		   <label>Username:</label>
+		   <input type="text" th:field="*{username}"/>
+	   </div>   
+	   <div>
+		   <label>Password:</label>
+		   <input type="password" th:field="*{password}"/>
+	   </div>
+	   <div>
+		   <label>Email:</label>
+		   <input type="email" th:field="*{email}"/>
+	   </div>	 
+	   <div>
+		   <button type="submit">サインアップ</button>
+	   </div>
+	 </form>
+
+</body>
+</html>

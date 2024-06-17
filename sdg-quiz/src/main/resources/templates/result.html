@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8">
+<title>結果発表</title>
+</head>
+<body>
+	
+	<h1>結果発表</h1>
+	<div th:if="${result == 'correct'}">
+		<h2>せいかい！</h2>
+	</div>
+		<div th:if="${result == 'incorrect'}">
+		<h2>ざんねん！</h2>
+	</div>
+	
+	<p th:text="'Explanation: ' + ${quiz.explanation}"></p>
+	<a th:href="@{/quiz}">もう一回あそぶ？</a>
+	<a th:href="@{/}">トップページ</a>
+
+</body>
+</html>

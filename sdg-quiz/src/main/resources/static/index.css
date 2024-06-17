@@ -1,0 +1,17 @@
+@charset "UTF-8";
+/* 背景色を変更 */
+body {
+  background-color: #f0f0f0; /* 薄いグレーの背景色 */
+}
+
+/* ヘッダーのフォントスタイルを変更 */
+h1 {
+  font-family: 'Arial', sans-serif; /* Arialフォントを使用 */
+  color: #333; /* 濃いグレーの文字色 */
+}
+
+/* リンクのフォントスタイルと色を変更 */
+a {
+  font-family: 'Helvetica', sans-serif; /* Helveticaフォントを使用 */
+  color: #0066cc; /* 青色の文字色 */
+}
