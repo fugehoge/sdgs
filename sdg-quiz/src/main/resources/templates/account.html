@@ -6,9 +6,9 @@
 </head>
 <body>
 	<h1>自分のアカウント</h1>
-	<p>Username: <span th;text="${user.username}"></span></p>
+	<p>Username: <span th:text="${user.username}"></span></p>
 	<p>Email: <span th:text="${user.email}"></span></p>
 
-
+	<a th:href="@{/}">トップページ</a>
 </body>
 </html>

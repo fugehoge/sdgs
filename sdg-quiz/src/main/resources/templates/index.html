@@ -6,12 +6,23 @@
 	<link rel="stylesheet" href="/index.css">
 </head>
 <body>
-	
-	<h1>SDGsクイズにようこそ！</h1>
-	<a th:href="@{/signup}">サインアップ</a>
-	<a th:href="@{/login}">ログイン</a>
-	<a th:href="@{/quiz}">クイズに挑戦！</a>
-	<a th:href="@{/account}">アカウントページ</a>
-
+	<header>
+		<h1>SDGsクイズにようこそ！</h1>
+	</header>
+	<div class = "container">
+		<div class = "hero">
+			<h1>持続可能な未来を目指して</h1>
+			<p>SDGsに関するクイズに挑戦して知識を深めよう！</p>
+	    </div>
+	    <div class="buttons">
+			<a th:href="@{/signup}">サインアップ</a>
+			<a th:href="@{/login}">ログイン</a>
+			<a th:href="@{/quiz}">クイズに挑戦！</a>
+			<a th:href="@{/account}">アカウントページ</a>
+        </div>
+     </div>
+     <footer>
+		 <p>&copy; 2024 SDGs Quiz. All Rights Reserved.</p>
+	 </footer>		 
 </body>
 </html>

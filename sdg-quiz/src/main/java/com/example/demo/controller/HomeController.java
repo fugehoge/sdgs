@@ -11,10 +11,6 @@ public class HomeController {
 		return "index";
 	}
 	
-	@GetMapping("/account")
-	public String account()
-	{
-		return "account";
-	}
+
 
 }

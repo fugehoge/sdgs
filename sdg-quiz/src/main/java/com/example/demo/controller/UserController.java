@@ -1,6 +1,8 @@
 package com.example.demo.controller;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.security.core.Authentication;
+import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -31,8 +33,18 @@ public class UserController {
 	}
 	
 	@GetMapping("/login")
-	public String showLongFrom()
+	public String showLongForm()
 	{
 		return "login";
 	}
+	
+    @GetMapping("/account")
+    public String showAccountPage(Model model) {
+        Authentication auth = SecurityContextHolder.getContext().getAuthentication();
+        String username = auth.getName();
+        User user = userService.fidByUsername(username);
+        model.addAttribute("user", user);
+        return "account";
+	}
+	
 }
